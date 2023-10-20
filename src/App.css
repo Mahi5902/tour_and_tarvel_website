@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:'poppins',sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* //colors and stlying */
+:root{
+ --primaryColor:hsl(199,100%,33%);
+ --secondary:hsl(187,85%,43%);
+ --gradientColor:linear-gradient(to right ,hsl(187,85%,43%),hsl(199,100%,33%));
+ --whiteColor:hsl(0%,0%,100%);
+ --blackColor:hsl(201,33%,16%);
+ --textColor:hsl(240,4%,36%) ;
+ --whiteColorDeam: hsl(0%,0%,93%);
+ --greyText:rgb(190,190,190);
+ --inputColor:rgb(239,239,239);
+ --bodyColor:rgb(240,240,246);
+ --cardBG:rgb(255,255,235);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+html {
+    scroll-behavior:smooth;
 }
-
-.App-link {
-  color: #61dafb;
+a{
+    text-decoration:none;
 }
+li{
+    list-style:none;
+}
+.section{
+    padding:4rem 0 2rem;
+}
+.container{
+    padding-left:1.5rem;
+    padding-right:1.5rem;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.icon{
+    font-size:2rem;
+    cursor:pointer;
+}
+.flex{
+    display:flex;
+    align-items:center;
+}
+.grid{
+    display:grid;
+    align-items:center;
+}
+.btn{
+  padding:0.6rem 1.5rem;
+  background:  var(--gradientColor);
+  border-radius:3rem;
+  border:none;
+  outline:none;
+  cursor:pointer;
+}
+.btn a{
+    color:var(--whiteColor);
+    font-weight:500;
+}
+.btn:hover{
+    background:var(--secondaryColor);
+}
+img,video{
+/* margin-top:70px; */
+width:100%;
+height:auto;
+/* overflow:hidden; */
+/* z-index:-1000; */
+}
+input{
+    font-size:100%;
+}
+body{
+    background:var(--bodyColor);
+}
+/* above this was a default styling that will apply to all the section */
+
+/* //media queries */
+@media screen and (min-width: 1240px) {
+.container{
+    width:80px !important;
+    margin:auto !important;
+}
+.section{
+padding:6rem 0.4rem;
+}
+}
+@media screen and (min-width: 2560px) {
+body{
+zoom:1.7;
+}
 }
